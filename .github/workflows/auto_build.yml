@@ -15,11 +15,11 @@ jobs:
     container: debian:bullseye
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - name: Build jumploaders
       run: sh build.sh
 
-    - uses: actions/upload-artifact@v2
+    - uses: actions/upload-artifact@v4
       with:
         name: Pre-Compiled Jumploaders
         path: 'build/*.bin'
